@@ -47,4 +47,9 @@ The image provides the following volumes:
 
 docker inspect ga_master_1 | jq '.[0] | {IPAddress: .NetworkSettings.IPAddress}'
 
+better one,
+
+docker inspect --format='{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' $INSTANCE_ID
+
+
  
