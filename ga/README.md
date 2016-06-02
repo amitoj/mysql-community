@@ -43,4 +43,8 @@ The image provides the following volumes:
   - /var/lib/mysql-files: the [secure file directory](https://dev.mysql.com/doc/refman/5.7/en/server-options.html#option_mysqld_secure-file-priv)
   - /backup: backup directory
 
+# My Notes
+
+docker inspect ga_master_1 | jq '.[0] | {IPAddress: .NetworkSettings.IPAddress}'
+
  
